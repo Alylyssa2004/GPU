@@ -94,7 +94,7 @@ int main() {
     vector<int> threads_test = {1, 2, 4, 8, 16}; // nombres de threads à tester
 
     cout << "\nTemps d'execution en fonction du nombre de threads :" << endl;
-    cout << "Threads \t Temps (ms)\t Facteur d'accélération" << endl;
+    cout << "Threads\tTemps (ms)\tFacteur d'accélération" << endl;
 
     for (int nbThreads : threads_test) {
         if (nbThreads > n) nbThreads = (int)n; // ne pas dépasser n
@@ -114,7 +114,7 @@ int main() {
 
         double speedup = duration_ms.count() / duration_mt.count();
 
-        cout << nbThreads << "\t       \t" << duration_mt.count() << "\t" << speedup << endl;
+        cout << nbThreads << "\t    " << duration_mt.count() << "   \t" << speedup << endl;
     }
 
     return 0;
