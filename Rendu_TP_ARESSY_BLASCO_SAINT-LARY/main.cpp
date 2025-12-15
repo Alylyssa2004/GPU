@@ -1,4 +1,4 @@
-//#include <C:/VulkanSDK/1.4.328.1/Include/vulkan/vulkan.h>
+// Sans la partie Vulkan
 #include <iostream>
 #include <vector>
 #include <chrono>
@@ -89,6 +89,7 @@ int main() {
     auto duration_ms2 = chrono::duration<double, milli>(end2 - start2); 
     cout << "Multi thread execution time: " << duration_ms2.count() << " ms" << endl;
     cout << "Single thread execution time: " << duration_ms.count() << " ms" << endl;
+    
     // ----- 3. Comparaison Single et Multi thread -----
     double speedup1 = duration_ms.count() / duration_ms2.count();
     cout << "Acceleration factor: " << speedup1 << endl;
@@ -127,7 +128,7 @@ int main() {
     // Faire la comparaison pour chaque N, avec 1,2,4,8,16 threads, enregistrer les temps en ns dans
     // un fichier csv que je pourais traiter plus tard
     // Fichier CSV de sortie
-    ofstream csv("resultats_multithread.csv");
+    ofstream csv("Resultats_multithread.csv");
     csv << "N,Threads,Temps_ns\n";
 
     for (size_t n_test : n_var) {
@@ -168,7 +169,7 @@ int main() {
     }
 
     csv.close();
-    cout << "\nCSV generated : resultats_multithread.csv\n";
+    cout << "\nCSV generated : Resultats_multithread.csv\n";
 
     return 0;
 }
